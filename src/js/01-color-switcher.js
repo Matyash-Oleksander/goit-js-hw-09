@@ -11,9 +11,10 @@ btnStop.addEventListener('click', onChangeColorStop);
 
 function onChangeColorStart(evt) {
   //  console.log("Старт зміни кольору");
+  btnStart.setAttribute('disabled', true);
   timerId = setInterval(() => {
     body.style.background = getRandomHexColor();
-    btnStart.setAttribute('disabled', true);
+
     // console.log("Кнопка НЕактивна");
   }, PROMT_DELAY);
 }
